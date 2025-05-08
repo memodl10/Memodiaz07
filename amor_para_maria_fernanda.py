@@ -1,8 +1,8 @@
 import streamlit as st
 import time
 
-# Configuración de la app
-st.set_page_config(page_title="Para mi chula", page_icon="💖")
+# Configuración de la página
+st.set_page_config(page_title="Para mi chula", page_icon="💖", layout="centered")
 
 # Título
 st.title("Para mi chula")
@@ -11,35 +11,37 @@ st.subheader("Una carta digital con todo mi cariño – Guillermo Andrés")
 # Mensaje inicial
 with st.spinner('Escribiéndote algo bonito...'):
     time.sleep(2)
+
 st.success("Te dedico este espacio solo a ti.")
-st.balloons()
+st.markdown("<h1 style='text-align: center;'>💖💖💖</h1>", unsafe_allow_html=True)
 
-# Mostrar imagen
-st.image("foto_chula.jpeg.JPG", caption="Tú y yo, mi chula hermosa.", use_column_width=True)
+# Imagen romántica
+st.image("foto_chula.jpeg", caption="Tú y yo, mi chula hermosa.", use_column_width=True)
 
-# Poesía con markdown
+# Poema romántico
 st.markdown("""
-### ✨ ¿Por qué te quiero, mi chula?
+### ✨ ¿Por qué te quiero, chula?
 - Porque tu sonrisa ilumina hasta los días más oscuros.
-- Porque tus abrazos tienen el poder de calmar mi alma.
+- Porque tus abrazos calman mi alma.
 - Porque contigo todo tiene sentido.
 - Porque eres mi regalo favorito de Dios.
 """)
 
+# Efecto de corazones flotando (simulado)
+for _ in range(10):
+    st.markdown("<p style='text-align: center; font-size: 24px;'>❤️ 💕 💖 💘 💗 💞</p>", unsafe_allow_html=True)
+    time.sleep(0.1)
+
 # Botón sorpresa
 if st.button("Haz clic si eres la más hermosa"):
-    st.write("Sabía que eras tú. ¡Mi chula hermosa, única e irrepetible!")
+    st.write("Sabía que eras tú. ¡Mi chula hermosa, única en el mundo!")
 
-# Canción favorita
-st.markdown("**Escuchemos nuestra canción juntos:**")
-st.video("https://www.youtube.com/watch?v=UyMNC3C2EGc")  # Puedes reemplazarlo si tienes otro link
-
-# Mensaje final
+# Canción favorita (Bruno Mars - Die With a Smile)
 st.markdown("""
----
+### **Nuestra canción**
+Escúchala conmigo:
 
-Gracias por existir, por hacerme reír y por dejarme quererte.
-
-Con todo mi cariño,  
-**Guillermo Andrés**
-""")
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/IeNMzGfTL40?autoplay=0" 
+frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+""", unsafe_allow_html=True)
